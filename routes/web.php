@@ -17,6 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/questions', 'QuestionController@index' );
 Route::get('/question/create', 'QuestionController@createQuestionPage');
 Route::post('/question', 'QuestionController@createNewQuestion');
+Route::get('/question/edit/{questionId}', 'QuestionController@updateQuestionPage');
+Route::post('/question/update/{questionId}', 'QuestionController@updateAQuestion');
 
-Route::get('/answers/{questionId}', 'AnswerController@index');
+Route::get('/question/delete/{questionId}', 'QuestionController@deleteQuestionPage');
+Route::post('/question/delete/{questionId}', 'QuestionController@deleteQuestion');
+
+
+
+Route::get('/question/{questionId}', 'AnswerController@index');
 Route::post('/answers/{questionId}', 'AnswerController@createNewAnswer');

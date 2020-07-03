@@ -24,9 +24,11 @@
           <tr>
             <td>{{$key + 1}}</td>
             <td>{{$question->name }}</td>
-            <td>{{$question->pertanyaan}}</td>
+            <td>{{$question->judul_pertanyaan}}</td>
             <td>
-              <a href="/answers/{{$question->id}}" class="btn btn-success">Lihat Jawaban</a>
+              <a href="/question/{{$question->id}}" class="btn btn-success">Lihat Jawaban</a>
+              <a href="/question/edit/{{$question->id}}" class="btn ">Edit</a>
+              <a href="/question/delete/{{$question->id}}" class="text-danger">x</a>
             </td>
           </tr>
           @endforeach

@@ -5,16 +5,23 @@
   <div class="container">
     <div class="row p-4">
       <div class="col-md-6">
-
-  <a href="/questions" class="d-block mb-4">Kembali ke daftar pertanyaan</a>
+        <div class="d-flex justify-content-between">
+        <a href="/questions" class="d-block mb-4">Kembali ke daftar pertanyaan</a>
+        <a href="/question/edit/{{$question->id}}">Edit Pertanyaan</a>
+        </div>
         <p>Pertanyaan : </p>
-       
-        <h3>{{$question->pertanyaan}} </h3>
+        <h3>{{$question->judul_pertanyaan}} </h3>
+        <p>{{$question->isi_pertanyaan}}</p>
+        <div class="d-flex">
+        <small class="mr-4"> Tanggal dibuat : {{ $question->created_at}}</small>
+        <small>Tanggal diedit : {{ $question->updated_at}}</small>
+      </div>
       </div>
       <div class="w-100 my-2"></div>
       <div class="col-md-6 my-3">
             Total Jawaban : {{count($answers)}}
       </div>
+      
       <div class="w-100"></div>
       </div>
 

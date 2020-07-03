@@ -27,10 +27,20 @@ class QuestionModel {
   }
 
   // update a question based on id
+  public static function update($data,$questionId){
+    $updated_question = DB::table('questions')
+              ->where('id', $questionId)
+              ->update($data);
+    return $updated_question;
+  }
 
+  
 
   // delete a question based on id 
-
+  public static function delete($questionId) {
+    $deletedQuestion = DB::table('questions')->where('id', '=', $questionId)->delete();
+    return $deletedQuestion;
+  }
 
 
 

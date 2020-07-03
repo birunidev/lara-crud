@@ -11,8 +11,12 @@
         <input type="text" id="nama" name="nama"  class="form-control form-control-lg">
       </div>
       <div class="form-group">
-        <label for="pertanyaan">Mau nanya apa ? </label>
-        <textarea id="pertanyaan" type="text" name="pertanyaan" class="form-control form-control-lg" rows="5" ></textarea>
+        <label for="judul_pertanyaan">Judul Pertanyaan ? </label>
+        <input id="judul_pertanyaan" type="text" name="judul_pertanyaan" class="form-control form-control-lg" >
+      </div>
+      <div class="form-group">
+        <label for="isi_pertanyaan">Isi Pertanyaan ? </label>
+        <textarea id="isi_pertanyaan" rows="5" type="text" name="isi_pertanyaan" class="form-control form-control-lg" ></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary">Buat Pertanyaan</button>
